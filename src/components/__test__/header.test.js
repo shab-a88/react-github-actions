@@ -6,10 +6,10 @@ test("Header component renders header title", () => {
   render(<Header />);
 
   // find element which has this text in it
-  let text = screen.getByText("This is the header mate");
+  let text = screen.getByText(/This is the header mate/i);
 
   // assert that this element is in the dom or component
-  expect(text).toBeInTheDocument();
+  //expect(text).toBeInTheDocument();
   expect(text.textContent).toBe("This is the header mate");
   // get the element to test the textcontent
 });
